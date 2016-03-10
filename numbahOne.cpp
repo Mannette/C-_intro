@@ -1,6 +1,7 @@
 // First program
 
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -44,6 +45,22 @@ int main() {
 
   // print out the result
   cout << result;
+
+  // intro to strings //
+
+  // declare variable
+  string mystring;
+  mystring = "This is the initial string content";
+
+  // print out string
+  // endl == END Line
+  cout << mystring << endl;
+
+  // redefine mystring
+  mystring {"This is a different string content"};
+
+  // print out string
+  cout << mystring << endl;
 
   // terminate the program
   return 0;
