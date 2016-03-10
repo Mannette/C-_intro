@@ -5,6 +5,11 @@
 
 using namespace std;
 
+const double pi = 3.14159;
+const char newline = '\n';
+
+#define RADIUS 6.093
+
 // initiate function called main
 int main() {
 
@@ -217,6 +222,46 @@ int main() {
    *
    * in raw strings, backslashes, single and double quotes are all valid characters.
    */
+
+  // Other Literals
+    // true and false are two possible values for variables of type bool
+    // nullptr is the null pointer value
+  bool foo = true;
+  bool bar = false;
+  int* p = nullptr;
+
+  // Sometimes its convenient to give a name to a constant value
+    // see lines 8 & 9;
+  // Then we can use these names instead of the literals they were defined to.
+
+  double r = 5.0; // radius
+  double circleOne, circleTwo;
+
+  circleOne = 2 * pi * r;
+  cout << circleOne << endl;
+  cout << newline << endl;
+
+  // Preprocessor Definitions
+    // Another way to name constant values
+    // Follow the form of:
+      // #define identifier replacement
+      // #define X 20
+    // see line 11
+  circleTwo = 2 * pi * RADIUS;
+  cout << circleTwo << endl;
+  cout << newline << endl;
+
+  /**
+   * Be careful when using #define
+   * the validity of the types or syntax involved is NOT checked in any way.
+   *
+   * #define lines are preprocessor directives and do not require semicolons at the end.
+   * The directive extends automatically until the end of the line
+   * If a semicolon is included, it is part of the replacement sequence
+   * and will be included in all replaced occurrences
+   */
+
+
 
 
 
