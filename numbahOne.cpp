@@ -127,7 +127,7 @@ int main() {
   /**
    * Must be enclosed in quotes
    * single character literals are enclosed in single quotes
-   * strings are enclosed in double quotes
+   * multiple character strings are enclosed in double quotes
    */
   'z';
   'p';
@@ -172,7 +172,7 @@ int main() {
   exampleStringThree {"Left \t Right"}; // tab within string
 
   string exampleStringFour;
-  exampleStringFour {"one\ntwo\nthree"}; // newlines within strings
+  exampleStringFour {"one\ntwo\nthree"}; // newlines within string
 
   // print first string
   cout << exampleStringOne   << endl;
@@ -193,6 +193,30 @@ int main() {
   two lines"; // equivalent to x = "string expressed in two lines"
 
   cout << x << endl;
+
+  /**
+   * Character and string literals default to type 'char'
+   * A different type can be specified by using one of the following prefixes
+   *
+   * | Prefix  | Character Type |
+   * |---------|----------------|
+   * |   u     | char16_t       |
+   * |---------|----------------|
+   * |   U     | char32_t       |
+   * |---------|----------------|
+   * |   L     | wchar_t        |
+   * |---------|----------------|
+   *
+   * There are two additional prefixes for string literals
+   * | Prefix   | Description                              |
+   * |----------|------------------------------------------|
+   * |   u8     | string encoded in executable using UTF-8 |
+   * |----------|------------------------------------------|
+   * |   R      | string literal is a raw string           |
+   * |----------|------------------------------------------|
+   *
+   * in raw strings, backslashes, single and double quotes are all valid characters.
+   */
 
 
 
